@@ -28,6 +28,10 @@
         success: function (data1) {
           var songids = data1.song;
           console.log(songids.length);
+          var tbody = document.getElementsByTagName("tbody")[0];
+          $(tbody).html(`<tr>
+                        <th>点击播放</th>
+                      </tr>`)
           for (var i = 0; i < songids.length; i++) {
             var songid = songids[i].songid;
             var td = document.createElement("td");
